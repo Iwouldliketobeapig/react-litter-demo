@@ -1,0 +1,69 @@
+.trans {
+  div {
+    margin-bottom: 12px;
+  }
+  &-demo1 {
+    width:100px;
+    transition: all 2s;
+  }
+  &-demo1:hover {
+    width: 200px;
+    background: red;
+  }
+  &-delay {
+    width:100px;
+    transition: all 2s 1s;
+  }
+  &-delay:hover {
+    width: 200px;
+    background: red;
+  }
+  &-linear {
+    width: 200px;
+    transition: all 2s linear;
+  }
+  &-linear:hover {
+    width: 400px;
+    background: red;
+  }
+  &-ease {
+    width: 200px;
+    transition: all 2s ease;
+  }
+  &-ease:hover {
+    width: 400px;
+    background: red;
+  }
+  &-ease-in {
+    width: 200px;
+    transition: all 2s ease-in;
+  }
+  &-ease-in:hover {
+    width: 400px;
+    background: red;
+  }
+  &-ease-out {
+    width: 200px;
+    transition: all 2s ease-out;
+  }
+  &-ease-out:hover {
+    width: 400px;
+    background: red;
+  }
+  &-ease-in-out {
+    width: 200px;
+    transition: all 2s ease-in-out;
+  }
+  &-ease-in-out:hover {
+    width: 400px;
+    background: red;
+  }
+  &-cubic-bezier {
+    width: 200px;
+    transition: all 2s cubic-bezier(1, 0, 0, 1);
+  }
+  &-cubic-bezier:hover {
+    width: 400px;
+    background: red;
+  }
+}

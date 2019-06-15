@@ -1,0 +1,12 @@
+.index {
+  padding: 12px;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  &-header {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
