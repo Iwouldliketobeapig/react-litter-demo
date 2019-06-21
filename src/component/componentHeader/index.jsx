@@ -4,19 +4,42 @@ const style = require('./index.module.scss');
 const addTitle = (title) => {
   return (Com) => {
     return class AddTitle extends Component {
+      constructor () {
+        super();
+        this.state = {
+          childernHasError: false,
+          error: '',
+          info: ''
+        }
+      }
 
       componentDidCatch (error, info) {
-        console.log('++++++++++++++++++++++++++++++++++++++++++');
+        this.setState({
+          childernHasError: true,
+          error,
+          info
+        });
       }
 
       render () {
-        console.log(this.props);
+        const { childernHasError, info } = this.state;
         return (
           <div className={style['index']}>
-            <h3 className={style['index-header']}>{title}</h3>
-            <div>
-              <Com {...this.props}/>
-            </div>
+            {
+              childernHasError ? 
+              <>
+                <h3 className={style['index-header']}>错误信息</h3>
+                <div>
+                  <p>component: {info.componentStack}</p>
+                </div>1
+              </> :
+              <>
+                <h3 className={style['index-header']}>{title}</h3>
+                <div>
+                  <Com {...this.props}/>
+                </div>
+              </>
+            }
           </div>
         )
       }

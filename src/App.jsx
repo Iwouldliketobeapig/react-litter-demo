@@ -7,7 +7,7 @@ import {
   Switch
 } from 'react-router-dom';
 // import store from './store';
-import ReduxDemo from './modules/reduxDemo.jsx';
+import ReduxDemo from './modules/reduxDemo';
 import Parent from './modules/communication/parent.jsx';
 import Higher from './modules/higher/demo.jsx';
 import EventAgent from './modules/agent';

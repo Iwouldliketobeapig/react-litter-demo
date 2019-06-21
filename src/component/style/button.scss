@@ -1,0 +1,11 @@
+.button-default {
+  padding: 8px;
+  border-radius: 4px;
+  background: #007fff;
+  color: #ffffff;
+  cursor: pointer;
+}
+.button-default:hover {
+  background: #2290FF;
+  transition: all 0.5s;
+}

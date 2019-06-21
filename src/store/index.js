@@ -1,12 +1,13 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import logger from 'redux-logger';
+import ReduxThunk from 'redux-thunk'
 
-const reducer = (state = 0, action) => {
+const reducer = (state = { count: 0 }, action) => {
   switch (action.type) {
     case 'add':
-      return state + 1;
+      return { count: state.count + 1 };
     case 'less':
-      return state - 1;
+      return { count: state.count - 1 };
     default: 
       return state;
   }
@@ -14,7 +15,7 @@ const reducer = (state = 0, action) => {
 const store = createStore(
   reducer, 
   compose(
-    applyMiddleware(logger),
+    applyMiddleware(logger, ReduxThunk),
   ),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
